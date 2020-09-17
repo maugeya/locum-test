@@ -1,3 +1,5 @@
+import { renderHook } from "@testing-library/react-hooks"
+
 import useFetch from "../hooks/useFetch"
 
 describe("testing useFetch works correctly", () => {
@@ -16,5 +18,15 @@ describe("testing useFetch works correctly", () => {
     })
   })
 
-  it("should store expected data in state if useFetch is successful", () => {})
+  it("should store expected data in state if useFetch is successful", async () => {
+    const url = "/locum-shifts"
+
+    jest.spyOn(global, "fetch").mockImplementation(fetchMock)
+
+    const { result, waitForNextUpdate } = renderHook(() => useFetch(url))
+
+    await waitForNextUpdate()
+
+    expect(result.current.data).toEqual(sampleData)
+  })
 })
