@@ -1,5 +1,6 @@
 import React from "react"
 import "./App.css"
+import Layout from "./components/Layout"
 import LocumShiftList from "./components/LocumShiftList"
 
 const locum = {
@@ -13,8 +14,15 @@ const locum = {
 function App() {
   return (
     <div className="App">
-      <h2>List of available locum shifts</h2>
-      <LocumShiftList locum={locum} />
+      <nav>
+        <div>
+          <h3>Welcome back {locum.firstName}!</h3>
+        </div>
+      </nav>
+      <Layout>
+        <h1>Available locum shifts</h1>
+        <LocumShiftList locum={locum} />
+      </Layout>
     </div>
   )
 }
