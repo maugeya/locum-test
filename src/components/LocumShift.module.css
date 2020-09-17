@@ -1,16 +1,27 @@
+.button {
+  height: 2rem;
+}
+
 .cardHeader {
   margin-top: 0;
 }
 
 .container {
   background: var(--card-background);
-  border: 2px solid var(--green);
+  border: 2px solid var(--blue);
   border-radius: 4px;
   color: var(--primary-dark);
   display: flex;
   margin: 1rem;
   padding: 2rem;
   width: 50%;
+}
+
+.ctaContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .headerContainer {
