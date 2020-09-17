@@ -1,7 +1,3 @@
-.button {
-  height: 2rem;
-}
-
 .cardHeader {
   margin-top: 0;
 }
@@ -15,13 +11,6 @@
   margin: 1rem;
   padding: 2rem;
   width: 50%;
-}
-
-.ctaContainer {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  justify-content: center;
 }
 
 .headerContainer {

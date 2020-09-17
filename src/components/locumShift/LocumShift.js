@@ -23,11 +23,6 @@ const LocumShift = ({ locumShift }) => {
           <p>Hourly Rate: £{locumShift.hourlyRate}</p>
         </div>
       </div>
-      <div className={styles.ctaContainer}>
-        <button className={styles.button} type="button">
-          Accept shift
-        </button>
-      </div>
     </div>
   )
 }
