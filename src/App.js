@@ -1,7 +1,7 @@
 import React from "react"
 import "./App.css"
-import Layout from "./components/Layout"
-import LocumShiftList from "./components/LocumShiftList"
+import Layout from "./components/layout/Layout"
+import LocumShiftList from "./components/locumShiftList/LocumShiftList"
 
 const locum = {
   id: "1234",
@@ -14,10 +14,8 @@ const locum = {
 function App() {
   return (
     <div className="App">
-      <nav>
-        <div>
-          <h3>Welcome back {locum.firstName}!</h3>
-        </div>
+      <nav name="nav">
+        <h3>Welcome back {locum.firstName}!</h3>
       </nav>
       <Layout>
         <h1>Available locum shifts</h1>
