@@ -1,5 +1,6 @@
 import React from "react"
 
+import styles from "./LocumShiftList.module.css"
 import useFetch from "../hooks/useFetch"
 import LocumShift from "./LocumShift"
 import { filterShiftsForLocum } from "../utils/locumShifts"
@@ -20,10 +21,13 @@ const LocumShiftList = ({ locum }) => {
   if (error.length) {
     return error.map((e) => <div>{e.message}</div>)
   }
-
-  return shiftsAvailableForLocum.map((shift, i) => (
-    <LocumShift key={i} locumShift={shift} />
-  ))
+  return (
+    <div className={styles.container}>
+      {shiftsAvailableForLocum.map((shift, i) => (
+        <LocumShift key={i} locumShift={shift} />
+      ))}
+    </div>
+  )
 }
 
 export default LocumShiftList
