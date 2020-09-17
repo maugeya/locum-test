@@ -5,12 +5,17 @@
   --blue: #2a7ab0;
 }
 
-body {
-  padding: 2rem;
-}
-
 p {
   margin: 0.4rem;
+}
+
+nav {
+  padding: 1rem;
+  text-align: right;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 .App {
