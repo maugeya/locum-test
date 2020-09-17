@@ -29,6 +29,7 @@ describe("testing useFetch works correctly", () => {
 
     expect(result.current.data).toEqual(SAMPLE_DATA)
     expect(result.current.error).toEqual([])
+    expect(result.current.isLoading).toEqual(false)
   })
 
   it("Should store error message in state if useFetch promise is rejected", async () => {
@@ -42,5 +43,6 @@ describe("testing useFetch works correctly", () => {
 
     expect(result.current.error.message).toEqual(errorMessage)
     expect(result.current.data).toEqual([])
+    expect(result.current.isLoading).toEqual(false)
   })
 })
