@@ -11,13 +11,22 @@ const LocumShift = ({ locumShift }) => {
       </div>
       <div className={styles.shiftDetails}>
         <div>
-          Date: {moment(locumShift.startDatetime).format("MMMM do YYYY")}
+          <p>Date: {moment(locumShift.startDatetime).format("MMMM do YYYY")}</p>
         </div>
         <div>
-          Start Time: {moment(locumShift.startDatetime).format("HH:mm")}
+          <p>Start Time: {moment(locumShift.startDatetime).format("HH:mm")}</p>
         </div>
-        <div>End Time: {moment(locumShift.endDatetime).format("HH:mm")}</div>
-        <div>Hourly Rate: £{locumShift.hourlyRate}</div>
+        <div>
+          <p>End Time: {moment(locumShift.endDatetime).format("HH:mm")}</p>
+        </div>
+        <div>
+          <p>Hourly Rate: £{locumShift.hourlyRate}</p>
+        </div>
+      </div>
+      <div className={styles.ctaContainer}>
+        <button className={styles.button} type="button">
+          Accept shift
+        </button>
       </div>
     </div>
   )
