@@ -28,5 +28,6 @@ describe("testing useFetch works correctly", () => {
     await waitForNextUpdate()
 
     expect(result.current.data).toEqual(sampleData)
+    expect(result.current.error).toEqual([])
   })
 })
