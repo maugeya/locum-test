@@ -22,6 +22,9 @@ const LocumShift = ({ locumShift }) => {
         <div>
           <p>Hourly Rate: £{locumShift.hourlyRate}</p>
         </div>
+        <div>
+          <p>Total of applications: {locumShift.applicationIds.length}</p>
+        </div>
       </div>
     </div>
   )
