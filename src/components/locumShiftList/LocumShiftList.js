@@ -1,9 +1,9 @@
 import React from "react"
 
 import styles from "./LocumShiftList.module.css"
-import useFetch from "../hooks/useFetch"
-import LocumShift from "./LocumShift"
-import { filterShiftsForLocum } from "../utils/locumShifts"
+import useFetch from "../../hooks/useFetch"
+import LocumShift from "../locumShift/LocumShift"
+import { filterShiftsForLocum } from "../../utils/locumShifts"
 
 const LocumShiftList = ({ locum }) => {
   const { data, isLoading, error } = useFetch(
@@ -15,7 +15,7 @@ const LocumShiftList = ({ locum }) => {
   const shiftsAvailableForLocum = filterShiftsForLocum(allShifts, locum)
 
   if (isLoading) {
-    return <div>LOADING...</div>
+    return <div className={styles.loading}>Loading</div>
   }
 
   if (error.length) {

@@ -1,0 +1,21 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: loadingEllipsis steps(4, end) 900ms infinite;
+  animation: loadingEllipsis steps(4, end) 900ms infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+@keyframes loadingEllipsis {
+  to {
+    width: 1.25em;
+  }
+}
