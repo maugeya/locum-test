@@ -30,4 +30,17 @@ describe("testing useFetch works correctly", () => {
     expect(result.current.data).toEqual(SAMPLE_DATA)
     expect(result.current.error).toEqual([])
   })
+
+  it("Should store error message in state if useFetch promise is rejected", async () => {
+    const errorMessage = "Testing Error"
+
+    jest.spyOn(global, "fetch").mockRejectedValue(new Error(errorMessage))
+
+    const { result, waitForNextUpdate } = renderHook(() => useFetch(URL))
+
+    await waitForNextUpdate()
+
+    expect(result.current.error.message).toEqual(errorMessage)
+    expect(result.current.data).toEqual([])
+  })
 })
