@@ -45,4 +45,16 @@ describe("testing useFetch works correctly", () => {
     expect(result.current.data).toEqual([])
     expect(result.current.isLoading).toEqual(false)
   })
+
+  // it("Should store in state that data is loading", () => {
+  //   const url = "/locum-shifts/"
+
+  //   jest.spyOn(global, "fetch").mockImplementation(fetchMock)
+
+  //   const { result } = renderHook(() => useFetch(url))
+
+  //   expect(result.current.isLoading).toEqual(true)
+  //   expect(result.current.data).toEqual([])
+  //   expect(result.current.error).toEqual([])
+  // })
 })
